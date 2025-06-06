@@ -37,10 +37,12 @@ section {
 
 /* Hero */
 .hero {
+  /* разбивка на 2 части
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 24px;
   align-items: center;
+  */
   margin-bottom: 24px;
 }
 .hero h1 {
