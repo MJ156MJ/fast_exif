@@ -1,6 +1,9 @@
-
 /* Reset */
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+}
 
 body {
   font-family: Geneva, sans-serif;
@@ -9,21 +12,43 @@ body {
   line-height: 1.4;
 }
 
+a { 
+  color: inherit; 
+  text-decoration: none; 
+}
 
-a { color: inherit; text-decoration: none; }
 .container {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px 0;
 }
+
+/* Header - новое позиционирование для English */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 0px;
+  position: relative;
 }
-.logo { font-size: 2rem; font-weight: bold; color: #a1ff3e; }
+
+.logo { 
+  font-size: 2rem; 
+  font-weight: bold; 
+  color: #a1ff3e; 
+}
+
+.lang-switch {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #1e2835;
+  padding: 8px 16px;
+  border-radius: 0 0 0 20px;
+  font-size: 0.9rem;
+}
+
 .btn-pre {
   padding: 12px 24px;
   background-color: #8f42ff;
@@ -37,23 +62,21 @@ section {
 
 /* Hero */
 .hero {
-  /* разбивка на 2 части
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 24px;
-  align-items: center;
-  */
   margin-bottom: 24px;
 }
+
 .hero h1 {
   font-size: 3rem;
   color: #a1ff3e;
   margin-bottom: 0px;
 }
+
 .hero .subtitle {
   font-size: 1.1rem;
-  
 }
+
+/* ... остальные стили остаются без изменений ... */
+
 .highlight {
   display: inline-block;
   background-color: #8f42ff;
@@ -62,6 +85,51 @@ section {
   padding: 8px 16px;
   border-radius: 20px;
   font-weight: bold;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.highlight:hover {
+  background-color: #7a2fff;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(143, 66, 255, 0.5);
+}
+
+/* Эффект пульсации */
+.highlight::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.4s ease, height 0.4s ease;
+}
+
+.highlight:hover::after {
+  width: 300px;
+  height: 300px;
+}
+
+/* Эффект градиента при наведении */
+.highlight:hover {
+  background: linear-gradient(90deg, #8f42ff, #b36bff);
+}
+
+/* Анимация текста */
+.highlight a {
+  position: relative;
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+.highlight:hover a {
+  transform: scale(1.05);
 }
 
 /* Grid and Cards */
@@ -71,21 +139,23 @@ section {
   gap: 24px;
   margin-bottom: 24px;
 }
+
 .card, .normal {
   background-color: #17202b;
   border-radius: 8px;
   padding: 14px;
 }
+
 .card h2, .normal h2 {
   margin-bottom: 16px;
   font-size: 1.5rem;
   color: #a1ff3e;
 }
+
 .card ul, .normal ul {
   list-style: none;
   padding-left: 0;
 }
-
 
 .card ul li, .normal ul li {
   list-style: square inside;
@@ -93,15 +163,16 @@ section {
   margin-bottom: 8px;
 }
 
-
 /* Theme Colors */
 .green {
   background-color: #a1ff3e;
   color: #0f131c;
 }
+
 .green h2 {
   color: #0f131c;
 }
+
 .green p {
   color: #0f131c;
 }
@@ -110,9 +181,11 @@ section {
   background-color: #8833FF;
   color: #ffffff;
 }
+
 .purple h2 {
   color: #ffffff;
 }
+
 .purple p {
   color: #ffffff;
 }
@@ -132,10 +205,12 @@ section {
   gap: 24px;
   margin-bottom: 24px;
 }
+
 .mission .normal {
   padding: 24px;
   border-radius: 16px;
 }
+
 .mission h3 {
   margin-bottom: 12px;
   font-size: 1.25rem;
@@ -150,25 +225,26 @@ footer {
   border-radius: 16px;
   margin-top: 24px;
 }
+
 .scr {
-  max-width: 100%; /* Не превышает размер родителя */
+  max-width: 100%;
   height: auto;
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.9); /* Смещение X, смещение Y, размытие, цвет */
-  border-radius: 8px; /* Опционально: скругление углов */
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.9);
+  border-radius: 8px;
 }
 
 .split-block {
-  display: grid; /* Включаем Grid */
-  grid-template-columns: 1fr 1fr; /* Две равные колонки */
-  gap: 20px; /* Отступ между колонками */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
 
 .left-part {
-  text-align: right; /* Выравнивание по правому краю */
+  text-align: right;
 }
 
 .right-part {
-  text-align: left; /* Выравнивание по левому краю */
+  text-align: left;
 }
 
 /* Современный вариант с фоном и тенью */
