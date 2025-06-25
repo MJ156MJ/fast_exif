@@ -1,68 +1,82 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
+
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EWREEZ08FR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EWREEZ08FR');
+</script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fast EXIF</title>
+  <title>Fast EXIF - Clean Image Metadata</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="container">
     <header>
       <div class="logo">
-        <img src="img/icon.png">
+        <a href="index.html"><img src="img/lodo.png" alt="Home"></a>
       </div>
       
-      <!-- Ссылка English в правом верхнем углу -->
-      <a href="index_en.html" class="lang-switch">English</a>
+      <!-- English link in top right corner -->
+      <a href="index_ru.html" class="lang-switch">Русский</a>
     </header>
 
     <!-- Hero -->
     <div class="hero">
       <div>
+        <img src="img/icon.png">
         <h1>Fast EXIF</h1>
-        <p class="subtitle">Простой и удобный инструмент для очистки метаданных ваших изображений</p>
       </div>
+
+      <p class="subtitle">Simple and convenient tool for cleaning metadata from your images</p>
+
       <div><!-- Image placeholder --></div>
     </div>
 
     <section>
       <div class="card normal">
-        <h2>Что</h2>
-        <p><i>EXIF-метаданные — это скрытая информация, которую добавляют камеры и программы при сохранении изображений. В неё входят:
-          Геолокация (координаты съёмки). Параметры камеры (модель, диафрагма, выдержка).
-          Данные о программе обработки и многое другое</i> </p>
+        <h2>What is EXIF Metadata?</h2>
+        <p><i>EXIF metadata is hidden information added by cameras and software when saving images. It includes:
+          Geotags (shooting coordinates). Camera parameters (model, aperture, shutter speed).
+          Editing software data and much more.</i> </p>
       </div>
     </section>
 
     <!-- Offering & Audience -->
     <div class="grid-2">
       <div class="card green">
-        <h2>Как выглядит</h2>
+        <h2>Appearance</h2>
         <p style="display: flex; justify-content: center;">
           <img class="scr" src="img/scr.png">
         </p>
       </div>
 
       <div class="card normal">
-        <h2>Что делает</h2>
+        <h2>Features</h2>
         <p>
-          <b>FastExif</b> Может удалять:
+          <b>FastExif</b> can remove:
           <ul>
-            <li>Только геотеги.</li>
-            <li>Только информацию о камере</li>
-            <li>Только параметры съёмки</li>
-            <li>Только программу обработки</li>
-            <li>Или <b>всё сразу</b> (полная очистка)</li>
+            <li>Geotags only</li>
+            <li>Camera information only</li>
+            <li>Shooting parameters only</li>
+            <li>Editing software data only</li>
+            <li>Or <b>all at once</b> (complete cleanup)</li>
           </ul>
-          Поддерживает форматы: JPG, JPEG
+          Supported formats: JPG, PNG, WEBP, TIFF, BMP
           <br><br>
-          <b>Пакетная обработка</b>
+          <b>Batch Processing</b>
           <ul>
-            <li>Одновременная работа с десятками файлов</li>
-            <li>Прогресс-бар для отслеживания статуса обработки</li>
-            <li>Безопасное сохранение — оригинальные файлы остаются неизменными</li>
-            <li>Результат сохраняется в новые файлы с суффиксом _clean (<i>например: photo_clean.jpg</i>)</li>
+            <li>Process dozens of files simultaneously</li>
+            <li>Progress bar to track processing status</li>
+            <li>Safe saving - original files remain unchanged</li>
+            <li>Results saved as new files with _clean suffix (<i>e.g.: photo_clean.jpg</i>)</li>
           </ul>
         </p>
       </div>
@@ -72,16 +86,16 @@
     <section>
       <div class="grid-2">
         <div class="card normal">
-          <h2>Скачать</h2>
+          <h2>Download</h2>
           <div class="split-block">
             <div class="left-part">
               <b>
-                Рейтинг:<br>
-                Версия:<br>
-                Совместимость:<br>
-                Размер:<br>
-                Язык<br>
-                Лицензия:<br>
+                Rating:<br>
+                Version:<br>
+                Compatibility:<br>
+                Size:<br>
+                Language:<br>
+                License:<br>
               </b>
             </div>
             <div class="right-part">
@@ -89,39 +103,39 @@
                 1.4<br>
                 Windows 10, 11<br>
                 15 Mb<br>
-                Русский<br>
-                Бесплатно<br>
+                English<br>
+                Free<br>
             </div>
           </div>
 
           <br>
 
           <blockquote class="modern">
-            Проект размещен на GitHub — ведущей платформе для открытой разработки с 
-            многомиллионным сообществом. GitHub — стандарт для IT-индустрии. 
+            The project is hosted on GitHub - the leading platform for open development with 
+            a multi-million community. GitHub is the standard for the IT industry. 
             <br><br>
-            Загрузка файлов с официальных репозиториев считается безопасной практикой 
-            в отличие от сомнительных сайтов.
+            Downloading files from official repositories is considered safe practice 
+            unlike questionable websites.
           </blockquote>
           
           <div style="text-align: right;">
             <div class="highlight">
-              <a href="#">Скачать бесплатно</a>
+              <a href="#">Download Free</a>
             </div>
           </div> 
         </div>
         
         <div class="card normal">
-          <h2>Для кого</h2>
+          <h2>For Whom</h2>
           <ul>
-            <li><b>для фотографов</b><br>
-               — чтобы скрыть параметры съемки перед публикацией.</li>
-            <li><b>для путешественников</b><br>
-               — для удаления гео-меток из фотох.</li>
-            <li><b>для корпораций</b><br>
-               — чтобы обезличить данные в документах (GDPR).</li>
-            <li><b>для веб-разработчиков</b><br>
-              — для оптимизации изображений.</li>
+            <li><b>For photographers</b><br>
+               — to hide shooting parameters before publication.</li>
+            <li><b>For travelers</b><br>
+               — to remove geotags from photos.</li>
+            <li><b>For corporations</b><br>
+               — to anonymize data in documents (GDPR compliance).</li>
+            <li><b>For web developers</b><br>
+              — to optimize images.</li>
           </ul>
         </div>
       </div>
@@ -130,23 +144,23 @@
     <!-- Purple Highlight Section -->
     <section>
       <div class="card normal">
-        <h2>Спасибо!</h2>
+        <h2>Thank You!</h2>
         <div style="text-align: center;">
-        <p>Спасибо за то что используете наше приложение! Мы работаем для Вас!</p>
-        <p>Мы будем очень признательны вашей посильной помощи нашему проекту.</p>
-        <p>Оказать материальную помошь Вы можете, перейдя по ссылке ниже.</p>
+        <p>Thank you for using our application! We work for you!</p>
+        <p>We would greatly appreciate any support for our project.</p>
+        <p>You can provide financial assistance by following the link below.</p>
         
           <div class="highlight">
-            <a href="#">Подробности здесь</a>
+            <a href="#">Details Here</a>
           </div>
-          <p style="margin-top: 15px;">Спасибо!</p>
+          <p style="margin-top: 15px;">Thank you!</p>
         </div> 
       </div>
     </section>
 
     <!-- Footer -->
     <footer>
-      <p>&copy; 2025 Fast EXIF. Все права защищены.</p>
+      <p>&copy; 2025 Fast EXIF. All rights reserved.</p>
     </footer>
   </div>
 </body>

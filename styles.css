@@ -17,6 +17,18 @@ a {
   text-decoration: none; 
 }
 
+.hero > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px; /* Отступ перед подзаголовком */
+}
+
+.hero img {
+  height: 60px;
+  width: auto;
+}
+
 .container {
   width: 90%;
   max-width: 1200px;
