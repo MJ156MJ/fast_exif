@@ -109,41 +109,85 @@
 
 
 
-    <!-- QR1-->
+    
     <div class="grid-2">
-      <div class="card green">
-        <h2>QR1</h2>
-        
 
-      </div>
+
+      <!-- QR1 -->
+<div class="card normal">
+  <div class="title-container">
+    <img width="40" src="img/qr/btc.png">
+    <h2>Bitcoin (BTC)</h2>
+  </div>
+  <img class="scr qr-image"  src="img/qr/qr_btc.png" alt="QR код для BTC">
+  <p class="center-text">Отсканируйте QR-код или скопируйте адрес ниже:</p>
+
+  <div class="wallet-address">
+    <input type="text" id="btc-address-1" value="bc1qn8nrk8q49vnl3pyx7zdf3lup5hp9x6l6ydu03p" readonly>
+    <button class="copy-btn" onclick="copyAddress('btc-address-1', this)">Скопировать</button>
+  </div>
+
+  <span class="copy-alert">Скопировано!</span>
+</div>
 
 
 
       <!-- QR2 -->
-      <div class="card normal">
-        <h2>QR2</h2>
-     
-      </div>
+<div class="card normal">
+  <h2>Поддержать BTC</h2>
+  <img class="scr qr-image" src="img/qr/qr_btc.png" alt="QR код для BTC">
+  <p class="center-text">Отсканируйте QR-код или скопируйте адрес ниже:</p>
+
+  <div class="wallet-address">
+    <input type="text" id="btc-address-2" value="bc1qn8nrk8q49vnl3pyx7zdf3lup5hp9x6l6ydu03p" readonly>
+    <button class="copy-btn" onclick="copyAddress('btc-address-2', this)">Скопировать</button>
+  </div>
+
+  <span class="copy-alert">Скопировано!</span>
+</div>
+
+
     </div>
 
 
 
-    <!-- QR3 -->
+    
     <section>
       <div class="grid-2">
-        <div class="card normal">
-          <h2>QR3</h2>
-          
 
-       
-        </div>
+
+
+        <!-- QR3 -->
+<div class="card normal">
+  <h2>Поддержать BTC</h2>
+  <img class="scr qr-image" src="img/qr/qr_btc.png" alt="QR код для BTC">
+  <p class="center-text">Отсканируйте QR-код или скопируйте адрес ниже:</p>
+
+  <div class="wallet-address">
+    <input type="text" id="btc-address-3" value="bc1qn8nrk8q49vnl3pyx7zdf3lup5hp9x6l6ydu03p" readonly>
+    <button class="copy-btn" onclick="copyAddress('btc-address-3', this)">Скопировать</button>
+  </div>
+
+  <span class="copy-alert">Скопировано!</span>
+</div>
         
 
 
-        <div class="card normal">
-          <h2>QR4</h2>
-          
-        </div>
+        <!-- QR4 -->
+<div class="card normal">
+  <h2>Поддержать BTC</h2>
+  <img class="scr qr-image" src="img/qr/qr_btc.png" alt="QR код для BTC">
+  <p class="center-text">Отсканируйте QR-код или скопируйте адрес ниже:</p>
+
+  <div class="wallet-address">
+    <input type="text" id="btc-address-4" value="bc1qn8nrk8q49vnl3pyx7zdf3lup5hp9x6l6ydu03p" readonly>
+    <button class="copy-btn" onclick="copyAddress('btc-address-4', this)">Скопировать</button>
+  </div>
+
+  <span class="copy-alert">Скопировано!</span>
+</div>
+
+
       </div>
     </section>
 
@@ -163,5 +207,30 @@
       <p>Контакты: <span class="niz">kyrchikov156@gmail.com</span></p>
     </footer>
   </div>
+
+
+
+
+
+  <script>
+    function copyAddress(inputId, button) {
+      const input = document.getElementById(inputId);
+      input.select();
+      input.setSelectionRange(0, 99999); // Для мобильных устройств
+      document.execCommand("copy");
+    
+      const alert = button.parentElement.nextElementSibling;
+      alert.style.display = "inline-block";
+    
+      setTimeout(() => {
+        alert.style.display = "none";
+      }, 2000);
+    }
+    </script>
+    
+
+
+
+
 </body>
 </html>
