@@ -289,7 +289,7 @@ blockquote.modern {
 
 /* Уменьшаем размер QR-кода */
 .qr-image {
-  max-width: 90%;
+  max-width: 80%;
   height: auto;
   display: block;
   margin: 0 auto 15px auto;
@@ -334,7 +334,8 @@ blockquote.modern {
 
 /* Всплывающее уведомление */
 .copy-alert {
-  display: none;
+  opacity: 0;
+  pointer-events: none; /* Чтобы не перехватывал клики */
   margin-top: 10px;
   color: #0f131c;
   background-color: #a1ff3e;
@@ -342,7 +343,12 @@ blockquote.modern {
   border-radius: 8px;
   font-size: 0.85rem;
   text-align: center;
-  animation: fadeInOut 2s ease;
+  transition: opacity 0.5s ease;
+}
+
+.copy-alert.show {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 @keyframes fadeInOut {

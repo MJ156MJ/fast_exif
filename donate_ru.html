@@ -214,18 +214,25 @@
 
   <script>
     function copyAddress(inputId, button) {
-      const input = document.getElementById(inputId);
-      input.select();
-      input.setSelectionRange(0, 99999); // Для мобильных устройств
-      document.execCommand("copy");
-    
-      const alert = button.parentElement.nextElementSibling;
-      alert.style.display = "inline-block";
-    
-      setTimeout(() => {
-        alert.style.display = "none";
-      }, 2000);
-    }
+  const input = document.getElementById(inputId);
+  input.select();
+  input.setSelectionRange(0, 99999); // Для мобильных устройств
+  document.execCommand("copy");
+
+  const alert = button.parentElement.nextElementSibling;
+
+  // Убираем все предыдущие активные уведомления
+  document.querySelectorAll('.copy-alert').forEach(el => el.classList.remove('show'));
+
+  // Показываем активное уведомление
+  alert.classList.add('show');
+
+  // Скрываем уведомление через 2 секунды
+  setTimeout(() => {
+    alert.classList.remove('show');
+  }, 2000);
+}
+
     </script>
     
 
