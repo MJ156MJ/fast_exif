@@ -97,12 +97,28 @@
       </div>
     </section>
 
-    <!-- QR1-->
+  
     <div class="grid-2">
-      <div class="card green">
-        <h2>QR1</h2>
-        <img src="img/qr/qr_btc.png">
-      </div>
+
+
+      <!-- QR1 -->
+<div class="card normal">
+  <div class="title-container">
+    <img width="40" src="img/qr/btc.png">
+    <h2>Bitcoin (BTC)</h2>
+  </div>
+  <img class="scr qr-image"  src="img/qr/qr_btc.png" alt="QR Bitcoin">
+  <p class="center-text">Scan the QR code or copy the address below.</p>
+
+  <div class="wallet-address">
+    <input type="text" id="btc-address-1" value="bc1qn8nrk8q49vnl3pyx7zdf3lup5hp9x6l6ydu03p" readonly>
+    <button class="copy-btn" onclick="copyAddress('btc-address-1', this)">Copy</button>
+  </div>
+
+  <span class="copy-alert">Скопировано!</span>
+</div>
+
+
 
       <!-- QR2 -->
       <div class="card normal">
