@@ -175,7 +175,7 @@ section {
 
 .card h2, .normal h2 {
   margin-bottom: 16px;
-  margin-top: 16px;
+  margin-top: 0px;
   font-size: 1.5rem;
   color: #a1ff3e;
 }
