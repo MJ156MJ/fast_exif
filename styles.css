@@ -192,6 +192,18 @@ section {
 }
 
 /* Theme Colors */
+
+.grey {
+  background-color: #39493d;
+  color: #ffffff;
+}
+
+
+.grey p {
+  color: #ffffff;
+}
+
+
 .green {
   background-color: #a1ff3e;
   color: #0f131c;
